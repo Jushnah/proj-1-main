@@ -1,0 +1,48 @@
+
+
+.content {
+    padding: 16px;
+    background-color: #f0f3f4;
+}
+
+.content > mat-card {
+    margin-bottom: 16px;
+    background-color: #f0f3f4;
+}
+
+.column-label {
+    margin-right: 8px;
+    font-size: 1rem;
+}
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #6a85b6;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(106, 133, 182, 0.5), rgba(186, 200, 224, 0.5));
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(106, 133, 182, 0.5), rgba(186, 200, 224, 0.5))
+  }
+  .testimonial-card{
+      height: 180px;
+      width: 270px;
+      background:   linear-gradient(to right, rgba(106, 133, 182, 0.5), rgba(186, 200, 224, 0.5));
+  }
+  img{
+      width: 130px;
+      height: 100px;
+  }
+  .gradient-custom2 {
+    /* fallback for old browsers */
+    background: #d299c2;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to bottom, rgba(210, 153, 194, 0.5), rgba(254, 249, 215, 0.5));
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to bottom, rgba(210, 153, 194, 0.5), rgba(254, 249, 215, 0.5))
+  }
+  #chd{
+      height: 80px;
+  }

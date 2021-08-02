@@ -1,0 +1,36 @@
+<!-- <a routerLink="/login" *ngIf="!_auth.loggedIn()"  routerLinkActive="active">LOGIN</a>
+<app-header></app-header>
+
+<router-outlet></router-outlet> -->
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- <div style="text-align:center">
+    <h1>
+      Welcome to {{ title }}!
+    </h1>
+  </div>
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+   
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     
+      <ul class="navbar-nav navbar-right">
+          <a class="nav-link"  routerLink="/login" *ngIf="!_auth.loggedIn()" routerLinkActive="active">Login</a>
+          <a class="nav-link" style="cursor:pointer" *ngIf="_auth.loggedIn()" (click)="loggedUser()">Add Product</a>
+          <a class="nav-link" style="cursor:pointer" *ngIf="_auth.loggedIn()" (click)="logoutUser()">Logout</a>
+      </ul>
+    </div>
+  </nav>    
+  
+    
+  <div class="container">
+    <router-outlet></router-outlet>            
+  </div> -->
+  <app-navbar></app-navbar>
+  <div id="maindiv">
+    
+    <router-outlet></router-outlet>
+    <flash-messages></flash-messages>
+    
+<app-footer></app-footer>
+  </div>

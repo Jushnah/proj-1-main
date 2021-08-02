@@ -1,0 +1,61 @@
+<div class="container" id="startdiv">
+
+    <div class="card">
+        <div class="card-header">
+            {{title}}
+        </div>
+        <div class="card-body">
+            <ng-container *ngIf="showJobs">
+            <div class="table-responsive">
+               
+                    
+                <table class="table">
+                    <thead>
+                        <tr>
+                           
+                            <th>Job Title</th>
+                            <th>Company</th>
+                            <th>Email-ID</th>
+                            <th>Requirements</th>
+                            <th>Location</th>
+                            <th>Closing Date</th>
+                            <th>qualification</th>
+                            <th>Emp Type</th>
+                            <th>Number of posts</th>
+                            <th>Description</th>
+                            
+                            <th>Actions</th>
+                           
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor = 'let job of jobs'>
+                            
+                            <td>{{ job.jobtitle}}</td>
+                            <td>{{ job.company}}</td>
+                            <td>{{ job.email}}</td>
+                            <td>{{ job.requirements}}</td>
+                            <td>{{ job.joblocation}}</td>
+                            <td>{{ job.exdate}}</td>
+                            <td>{{ job.qualification}}</td>
+                            <td>{{ job.type}}</td>
+                            <td>{{ job.nojobs}}</td>
+                            <td>{{ job.description}}</td>
+                            <td>
+                                
+                                <button class="btn btn-warning" style="cursor:pointer" *ngIf="_auth.loggedIn()" (click)="editjob(job)" style="margin-left: 20px;"> APPROVE</button>
+                                <button class="btn btn-danger" style="cursor:pointer" *ngIf="_auth.loggedIn()" (click)="deletejob(job)"> DECLINE</button>
+                              </td>
+                        </tr>
+                    </tbody>
+                </table>
+            
+            </div>
+        </ng-container>
+        <ng-container *ngIf="!showJobs">
+            <h2>No Pending Verifications</h2>
+            </ng-container>
+            </div>
+            </div>
+            </div>
+        

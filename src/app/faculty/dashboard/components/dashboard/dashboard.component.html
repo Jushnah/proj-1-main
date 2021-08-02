@@ -1,0 +1,273 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+
+
+<div class="container bootstrap snippet">
+ 
+    <div class="row">
+  		<div class="col-sm-10"><h1>{{facultyinfo.username}}</h1></div>
+    	<div class="col-sm-2"><a href="/users" class="pull-right"><img title="profile image" class="img-circle img-responsive" src="http://www.gravatar.com/avatar/28fd20ccec6865e2d5f0e1f4446eb7bf?s=100"></a></div>
+    </div>
+
+    <div class="row">
+  		<div class="col-sm-3"><!--left col-->
+              
+
+      <div class="text-center">
+        <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+        <h6>Upload a different photo...</h6>
+        <input type="file" class="text-center center-block file-upload"  >
+        <!-- <img [src]="imageSrc" *ngIf="imageSrc"> -->
+      </div><br>
+</div>
+</div>
+               
+          <div class="panel panel-default">
+            <div class="panel-heading">FacultyID<i class="fa fa-link fa-1x"></i></div>
+            <div class="panel-body"><label>ABC345</label></div>
+          </div>
+          
+          
+          
+               
+          
+          
+        </div><!--/col-3-->
+    	<div class="col-sm-9">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+                
+              </ul>
+
+              
+          <div class="tab-content">
+            <div class="tab-pane active" id="home">
+              
+                  <form class="form" action="##" method="post" id="registrationForm" (ngSubmit)="editProfile()">
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                              <label for="firstname"><h4>First name</h4></label>
+                              <input type="text" class="form-control" name="firstname" id="firstname" placeholder="first name" title="enter your first name if any." [(ngModel)]="facultyinfo.username" >
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                            <label for="last_name"><h4>Last name</h4></label>
+                              <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any."[(ngModel)]="facultyinfo.lastname">
+                          </div>
+                      </div>
+          
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                              <label for="phone"><h4>Phone</h4></label>
+                              <input type="text" class="form-control" name="phone" id="phone" placeholder="enter phone" title="enter your phone number if any." [(ngModel)]="facultyinfo.phone_number">
+                          </div>
+                      </div>
+          
+                      
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                              <label for="email"><h4>Email</h4></label>
+                              <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email."[(ngModel)]="facultyinfo.user_email">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                              <label for="skills"><h4>Skills</h4></label>
+                              <input type="skills" class="form-control" id="skills" placeholder="Enter your skills" title="skills" [(ngModel)]="facultyinfo.skills">
+                          </div>
+                      </div>
+
+					  <div class="form-group">
+					  <div class="col-xs-6">
+                        <label for="Coursehandling">Course Handling</label>
+                        <select  id="coursehandling" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                          <option selected>Choose...</option>
+                          
+                          <option value="AdvancedProgramming">Advanced Programming</option>
+                    <option value="Advanced C++ Programming">Advanced C++ Programming</option>
+                    <option value="ASP.NET Programming">ASP.NET Programming></option>
+                    
+                    <option value="Cloud infrastructure & servces" >Cloud infrastructure & servces</option>
+                    <option value="Backup Recovery Systems and Architecture" >Backup Recovery Systems and Architecture</option>
+                    <option value="Building Information Modeling using Autodesk Revit" >Building Information Modeling using Autodesk Revit</option>
+                    
+                    <option value="C# & ADO.Net Programming" >C# & ADO.Net Programming</option>
+                    
+                    <option value="DATA SCIENCE AND BIG DATA ANALYTICS" >DATA SCIENCE AND BIG DATA ANALYTICS</option>
+                    
+                    <option value="Digital Literacy (IT for Non-IT Professionals)" >Digital Literacy (IT for Non-IT Professionals)</option>
+                    <option value="Digital Prototyping using Autodesk Inventor" >Digital Prototyping using Autodesk Inventor</option>
+                    <option value="Digital Signal Processing" >Digital Signal Processing</option>
+                    <option value="Embedded System Design using LabView" >Embedded System Design using LabView</option>
+                    <option value="Foundation Skills in IT" >Foundation Skills in IT</option>
+                    <option value="Information Storage and Management" >Information Storage and Management</option>
+                    <option value="J2EE Programming" >J2EE Programming</option>
+                    <option value="PHP with MySQL" >PHP with MySQL</option>
+                    <option value="Multicore Programming" >Multicore Programming</option>
+                   
+                    <option value="Software Testing" >Software Testing</option>
+                    <option value="SQL and PL/SQL Programming" >SQL and PL/SQL Programming</option>
+                    <option value="VLSI" >VLSI</option>
+                    <option value="Web Designing and Scripting" >Web Designing and Scripting</option>
+                    
+                  
+                        </select>
+                      </div>
+                      
+                      
+					</div>
+					   <div class="form-group">
+                            <label>Month & Year of joining ICT </label> 
+                            <mat-form-field class="example-full-width">
+                                <input matInput [matDatepicker] ="datepicker" [(ngModel)]="facultyinfo.dateofjoining" [min]="minDate" formControlName="date" class="form-control" >
+                                
+                                <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+                                <mat-datepicker #datepicker></mat-datepicker>
+                                
+                                
+                              </mat-form-field>
+							</div>
+            
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                              <label for="password"><h4>Password</h4></label>
+                              <input type="password" class="form-control" name="password" id="password" placeholder="password" title="enter your password.">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                            <label for="password2"><h4>Verify</h4></label>
+                              <input type="password" class="form-control" name="password2" id="password2" placeholder="password2" title="enter your password2." [(ngModel)]="facultyinfo.password">
+                              
+                          </div>
+                      </div>
+                      <div class="form-group">
+                           <div class="col-xs-12">
+                                <br>
+                                
+                                  <!-- <button type="submit">Submit</button> -->
+
+                                
+                                
+                                
+                              	<button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
+                               	<button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
+                            </div>
+                      </div>
+                    </form>
+
+
+                    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-8">
+                                <div class="card">
+                                    <div class="card-body bg-primary text-white mailbox-widget pb-0">
+                                        <h2 class="text-white pb-3">Alumni Messages</h2>
+                                        <ul class="nav nav-tabs custom-tab border-bottom-0 mt-4" id="myTab" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="inbox-tab" data-toggle="tab" aria-controls="inbox" style="cursor:pointer" role="tab" aria-selected="true">
+                                                    <span class="d-block d-md-none"><i class="ti-email"></i></span>
+                                                    <span class="d-none d-md-block"> INBOX</span>
+                                                </a>
+                                        </ul>
+                                    </div>
+                                    <div class="tab-content" id="myTabContent">
+                                        <div class="tab-pane fade active show" id="inbox" aria-labelledby="inbox-tab" role="tabpanel">
+                                            <div>
+                                                <div class="row p-4 no-gutters align-items-center">
+                                                    <div class="col-sm-12 col-md-6">
+                                                        <h3 class="font-light mb-0"><i class="ti-email mr-2"></i>350 Unread emails</h3>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <!-- Mail list-->
+                                                <div class="table-responsive">
+                                                    <table class="table email-table no-wrap table-hover v-middle mb-0 font-14">
+                                                        <tbody>
+                                                            <!-- row -->
+                                                            <tr *ngFor='let msg of message'>
+                                                                <!-- label -->
+                                                                <td class="pl-3">
+                                                                    <div class="custom-control custom-checkbox">
+                                                                        <input type="checkbox" class="custom-control-input" id="cst1" />
+                                                                        <label class="custom-control-label" for="cst1">&nbsp;</label>
+                                                                    </div>
+                                                                </td>
+                                                                <!-- star -->
+                                                                <td><i class="fa fa-star text-warning"></i></td>
+                                                                <td>
+                                                                    <span class="mb-0 text-muted">{{msg.username}}</span>
+                                                                </td>
+                                                                <!-- Message -->
+                                                                <td>
+                                                                    <a >
+                                                                        <span class="text-dark">
+                                                                            <mat-expansion-panel [(ngModel)]="msg.expanded" 
+                                                                            [expanded]="msg.expanded" ngDefaultControl>
+                                                                        
+                                                                            <mat-expansion-panel-header>
+                                                                                <button (click)="toggle(msg.expanded)" type="button" class="btn btn-outline-info btn-sm btn-block">{{msg.subject}}</button>
+                                                                            </mat-expansion-panel-header>
+                                                                            <p>{{ msg.message }}</p>
+                                                                            
+                                                                        </mat-expansion-panel></span>
+                                                                    </a>
+                                                                    
+                                                                </td>
+                                                                
+                                                                <!-- Attachment -->
+                                                                <td><i class="fa fa-paperclip text-muted"></i></td>
+                                                                <!-- Time -->
+                                                                <td class="text-muted">{{msg.date}}</td>
+                                                            </tr>
+                                                           
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                   
+              
+              
+              
+            
+          
+                    
+    
+  
+
+                                 

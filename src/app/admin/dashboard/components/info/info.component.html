@@ -1,0 +1,112 @@
+<div class="jumbotron">
+    <div class="container">
+      
+        <div class="row"> <h3>Create Job Posts</h3> 
+            <div class="col-md-6 offset-md-3">
+                
+                <form [formGroup]="JobpostForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label>Job Title</label>
+                        <input type="text" formControlName="jobtitle" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.jobtitle.errors }" />
+                        <div *ngIf="submitted && f.jobtitle.errors" class="invalid-feedback">
+                            <div *ngIf="f.jobtitle.errors.required">Job title is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Company Name</label>
+                        <input type="text" formControlName="company" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.company.errors }" />
+                        <div *ngIf="submitted && f.company.errors" class="invalid-feedback">
+                            <div *ngIf="f.company.errors.required">Company Name is required</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" formControlName="email" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required">Email is required</div>
+                            <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Job Type</label>
+                        <select formControlName="type" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.type.errors }">
+                            <option disabled>Select </option>
+                            
+                            <option *ngFor="let suit of oppoSuits">{{suit}}</option>
+                          </select>
+                          <div *ngIf="submitted && f.type.errors" class="invalid-feedback">
+                            <div *ngIf="f.type.errors.required">Gender is required</div>
+                        </div> 
+                       
+                    </div>
+                    <div class="form-group">
+                        <label>joblocation</label> <input type="text" formControlName="joblocation" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.joblocation.errors }" />
+                        <div *ngIf="submitted && f.joblocation.errors" class="invalid-feedback">
+                            <div *ngIf="f.joblocation.errors.required">City is required
+                    
+                            </div>
+                        </div>
+                    </div>
+                        <div class="form-group">
+                            <label>qualification</label> <input type="text" formControlName="qualification" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f.qualification.errors }" />
+                            <div *ngIf="submitted && f.qualification.errors" class="invalid-feedback">
+                                <div *ngIf="f.qualification.errors.required">course is required</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>requirements</label> <input type="text" formControlName="requirements" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f.requirements.errors }" />
+                            <div *ngIf="submitted && f.requirements.errors" class="invalid-feedback">
+                                <div *ngIf="f.requirements.errors.required">course is required</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Closing Date </label> 
+                            <mat-form-field class="example-full-width">
+                                <input matInput [matDatepicker] ="datepicker" [min]="minDate" formControlName="exdate" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f.exdate.errors }">
+                                <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+                                <mat-datepicker #datepicker></mat-datepicker>
+                                <div *ngIf="submitted && f.exdate.errors" class="invalid-feedback">
+                                    <div *ngIf="f.exdate.errors.required">Course completion month is required</div>
+                                </div>
+                              </mat-form-field>                                      
+                         
+                              
+                           
+                        </div>
+                        <div class="form-group">
+                            <label>nojobs</label> <input type="text" formControlName="nojobs" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f.nojobs.errors }" />
+                            <div *ngIf="submitted && f.nojobs.errors" class="invalid-feedback">
+                                <div *ngIf="f.nojobs.errors.required">course is required</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>description</label> <input type="text" formControlName="description" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
+                            <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+                                <div *ngIf="f.description.errors.required">course is required</div>
+                            </div>
+                        </div>
+                        <br><br>
+                               
+                                <div class="form-group" style="align-content: center;">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button
+                                        class="btn btn-primary">Submit</button>&nbsp;&nbsp;
+                                    <button class="btn btn-primary" type="reset" value="reset">CANCEL</button>
+                                </div>
+                             <br>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

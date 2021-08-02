@@ -1,0 +1,13 @@
+.py-5{
+    padding: 140px;
+    padding-top: 12%;
+    height: 150%;
+    background-image: url('../../assets/img/talent-man.svg');
+   
+    background-repeat: no-repeat;
+    background-position: left;
+}
+#spl{
+   padding-left: 10%;
+   padding-top: 6%;
+}

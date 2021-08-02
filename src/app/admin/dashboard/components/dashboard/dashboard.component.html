@@ -1,0 +1,75 @@
+<div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+        <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%" >
+            <!-- <mat-card class="mat-elevation-z4" >   *ngFor="let num of [1,2,3,4,5,6]"  -->
+                <mdb-card class="testimonial-card">
+                    <div class="gradient-custom ">
+                       
+                    </div>
+              
+                    <!--Avatar-->
+                    <div class="avatar mx-auto">
+                      <img src="../../../../../assets/img/cardimageuser.png" class="rounded-circle">
+                    </div>   
+                    <div class="gradient-custom" id="chd"><a [routerLink]="'/user'" >USER MANAGEMENT </a></div>
+                  </mdb-card>
+          
+        <!-- </mat-card> -->
+        
+      
+      </div>
+      <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%" >
+        <!-- <mat-card class="mat-elevation-z4" >   *ngFor="let num of [1,2,3,4,5,6]"  -->
+            <mdb-card class="testimonial-card">
+                
+          
+                <!--Avatar-->
+                <div class="avatar mx-auto">
+                  <img src="../../../../../assets/img/cardimagejobs.png" class="rounded-circle">
+                </div>   
+                <div class="gradient-custom " id="chd"><a [routerLink]="'/job_verify'" >VERIFY JOB POSTS </a> </div>
+              </mdb-card>
+      
+    <!-- </mat-card> -->
+    
+  
+  </div>
+  <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%" >
+    <!-- <mat-card class="mat-elevation-z4" >   *ngFor="let num of [1,2,3,4,5,6]"  -->
+        <mdb-card class="testimonial-card">
+           
+      
+            <!--Avatar-->
+            <div class="avatar mx-auto">
+              <img src="../../../../../assets/img/cardimageverif.png" class="rounded-circle">
+              
+            </div>   
+            <div class="gradient-custom " id="chd">USER MANAGEMENT </div>
+          </mdb-card>
+  
+<!-- </mat-card> -->
+
+
+</div>
+<div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%" >
+    <!-- <mat-card class="mat-elevation-z4" >   *ngFor="let num of [1,2,3,4,5,6]"  -->
+        <mdb-card class="testimonial-card">
+           
+      
+            <!--Avatar-->
+            <div class="avatar mx-auto">
+              <img src="../../../../../assets/img/cardimgverifjob.jpg" class="rounded-circle">
+            </div>   
+            <div class="gradient-custom " id="chd"><a [routerLink]="'/job_view'" >VIEW JOBS </a> </div>
+          </mdb-card>
+  
+<!-- </mat-card> -->
+
+
+</div>
+<div [@routerAnimation]="outlet">
+    <router-outlet #outlet></router-outlet>
+</div>
+
+    </div>
+    </div>

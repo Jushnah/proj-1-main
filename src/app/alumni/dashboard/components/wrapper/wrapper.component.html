@@ -1,0 +1,49 @@
+<mat-sidenav-container autosize>
+    <mat-sidenav #sidenav mode="side" opened="true">
+      <mat-nav-list>
+        <div class="left-bg">
+        <mat-list-item>
+           
+          <mat-icon mat-list-icon class="chevron-button sidenav-button" (click)="isExpanded = !isExpanded" [ngClass]="{'rotated': isExpanded}">chevron_right</mat-icon>
+        </mat-list-item>
+         </div>
+         <mat-list-item [routerLink]="''">
+          <mat-icon mat-list-icon>supervisor_account</mat-icon>
+          <span *ngIf="isExpanded">Profile</span>
+          <mat-icon mat-list-icon class="chevron-button1 sidenav-button" (click)="isExpanded1 = !isExpanded1" [ngClass]="{'rotated': isExpanded1}">chevron_right</mat-icon>
+        </mat-list-item>
+
+        <mat-list-item  [routerLink]="'dashboard'">
+          <mat-icon mat-list-icon >home</mat-icon>
+          <span *ngIf="isExpanded">Dashboard</span>
+          <mat-icon mat-list-icon class="chevron-button1 sidenav-button" (click)="isExpanded1 = !isExpanded1" [ngClass]="{'rotated': isExpanded1}">chevron_right</mat-icon>
+        </mat-list-item>
+  
+        <mat-list-item [routerLink]="'job_view'">
+          <mat-icon mat-list-icon>important_devices</mat-icon>
+          <span *ngIf="isExpanded">View Jobs</span>  
+          <mat-icon mat-list-icon class="chevron-button1 sidenav-button" (click)="isExpanded1 = !isExpanded1" [ngClass]="{'rotated': isExpanded1}">chevron_right</mat-icon>
+        </mat-list-item>
+  
+        <mat-list-item [routerLink]="'user'">
+          <mat-icon mat-list-icon>supervisor_account</mat-icon>
+          <span *ngIf="isExpanded">Saved Jobs</span>
+          <mat-icon mat-list-icon class="chevron-button1 sidenav-button" (click)="isExpanded1 = !isExpanded1" [ngClass]="{'rotated': isExpanded1}">chevron_right</mat-icon>
+        </mat-list-item>
+       
+  
+      </mat-nav-list>
+    </mat-sidenav>
+  
+    <div class="content">
+      <mat-toolbar>
+      
+        <h4></h4>
+      </mat-toolbar>
+      <div class="contentwrapper">
+        <router-outlet></router-outlet>
+      </div>
+     
+    </div>
+  
+  </mat-sidenav-container>

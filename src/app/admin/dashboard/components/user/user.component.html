@@ -1,0 +1,97 @@
+
+<div class="container" id="startdiv">
+
+    <div class="card">
+        <div class="card-header">
+            {{title}}
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <ng-container *ngIf="showFaculty">
+                    <h2>FACULTY</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                           
+                            <th>Username</th>
+                            <th>Email id</th>
+                            <th>Phone Number</th>
+                           
+                           
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor = 'let user of users'>
+                            
+                            <td>{{ user.firstname}}</td>
+                            <td>{{ user.user_email}}</td>
+                            <td>{{ user.phone_number}}</td>
+                           
+                        </tr>
+                    </tbody>
+                </table>
+            </ng-container>
+                <br><br>
+                <ng-container *ngIf="showAlumni">
+                    <h2>ALUMNI</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                           
+                            <th>Username</th>
+                            <th>Email id</th>
+                            <th>Phone Number</th>
+                            
+                           
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor = 'let alumni of alumnis'>
+                            
+                          
+                            <td>{{ alumni.firstname}}</td>
+                            <td>{{ alumni.user_email}}</td>
+                            <td>{{ alumni.phone_number}}</td>
+                           
+                        </tr>
+                        </tbody>
+                        </table>
+                </ng-container>
+                        <br><br>
+                        <ng-container *ngIf="showEmp">
+                            <h2>EMPLOYERS</h2>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                   
+                                    <th>Username</th>
+                                    <th>Email id</th>
+                                    <th>Phone Number</th>
+                                    
+                                   
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor = 'let emp of emps'>
+                                    
+                                    <td>{{ emp.firstname}}</td>
+                                    <td>{{ emp.user_email}}</td>
+                                    <td>{{ emp.phone_number}}</td>
+                                    
+                                </tr>
+                                </tbody>
+                                </table> 
+                                </ng-container>   
+                                <!-- <ng-container *ngIf="!showAlumni" *ngIf="!showEmp"  *ngIf="!showFaculty">
+                                    <h2>NO PENDING VERIFICATIONS</h2>
+                                </ng-container>        -->
+            </div>
+        </div>
+    </div>
+
+   
+
+    
+
+  </div>
+

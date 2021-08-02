@@ -1,0 +1,207 @@
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+.portfolio #portfolio-flters {
+    padding: 0;
+    margin: 0 auto 25px auto;
+    list-style: none;
+    text-align: center;
+    border-radius: 50px;
+  }
+  
+  .portfolio #portfolio-flters li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 8px 18px 10px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    color: #444444;
+    margin: 0 3px 10px 3px;
+    transition: all ease-in-out 0.3s;
+    background: #fafafc;
+    border-radius: 50px;
+  }
+  
+  .portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
+    color: #414c64;
+    background: #ffc107;
+  }
+  
+  .portfolio #portfolio-flters li:last-child {
+    margin-right: 0;
+  }
+  
+  .portfolio .portfolio-item {
+    margin-bottom: 30px;
+    overflow: hidden;
+  }
+  
+  .portfolio .portfolio-item img {
+    position: relative;
+    top: 0;
+    transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  
+  .portfolio .portfolio-item .portfolio-info {
+    opacity: 0;
+    position:relative;
+    left: 0px;
+    right: 15px;
+    bottom: -50px;
+    z-index: 3;
+    transition: all ease-in-out 0.3s;
+    background: #5b6a88;
+    padding: 15px 20px;
+  }
+  
+  .portfolio .portfolio-item .portfolio-info h4 {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  .portfolio .portfolio-item .portfolio-info p {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  
+  .portfolio .portfolio-item .portfolio-info .preview-link, .portfolio .portfolio-item .portfolio-info .details-link {
+    position: absolute;
+    right: 50px;
+    font-size: 24px;
+    top: calc(50% - 18px);
+    color: rgba(255, 255, 255, 0.7);
+    transition: ease-in-out 0.3s;
+  }
+  
+  .portfolio .portfolio-item .portfolio-info .preview-link:hover, .portfolio .portfolio-item .portfolio-info .details-link:hover {
+    color: #fff;
+  }
+  
+  .portfolio .portfolio-item .portfolio-info .details-link {
+    right: 15px;
+  }
+  
+  .portfolio .portfolio-item:hover img {
+    top: 30px;
+  }
+  
+  .portfolio .portfolio-item:hover .portfolio-info {
+    opacity: 1;
+    bottom: 0;
+  }
+  
+  /*--------------------------------------------------------------
+  # Portfolio Details
+  --------------------------------------------------------------*/
+  .portfolio-details {
+    padding-top: 40px;
+  }
+  
+  .portfolio-details .portfolio-details-slider img {
+    width: 100%;
+  }
+  
+  .portfolio-details .portfolio-details-slider .swiper-pagination {
+    margin-top: 20px;
+    position: relative;
+  }
+  
+  .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    opacity: 1;
+    border: 1px solid #ffc107;
+  }
+  
+  .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #ffc107;
+  }
+  
+  .portfolio-details .portfolio-info {
+    padding: 10px;
+    box-shadow: 0px 0 30px rgba(65, 76, 100, 0.08);
+  }
+  
+  .portfolio-details .portfolio-info h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .portfolio-details .portfolio-info ul {
+    list-style: none;
+    padding: 0;
+    font-size: 15px;
+  }
+  
+  .portfolio-details .portfolio-info ul li + li {
+    margin-top: 10px;
+  }
+  
+  .portfolio-details .portfolio-description {
+    padding-top: 30px;
+  }
+  
+  .portfolio-details .portfolio-description h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .portfolio-details .portfolio-description p {
+    padding: 0;
+  }
+
+  /*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+    padding: 60px 0;
+  }
+  
+  .section-bg {
+    background-color: #f7f8fa;
+  }
+  
+  .section-title {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  
+  .section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+  }
+  
+  .section-title h2::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #ffc107;
+    bottom: 0;
+    left: calc(50% - 25px);
+  }
+  
+  .section-title p {
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #aab3c7;
+  }
+  
+#colol{
+   border-style:solid;
+  border-width: 2px;
+  border-color: burlywood;
+}

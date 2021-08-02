@@ -1,0 +1,44 @@
+ <!-- ======= Header ======= -->
+ <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-between">
+
+     
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <a href="index.html" class="logo"><img src="../../assets/img/ict-ico.png" alt="" class="img-fluid"></a>
+      <h1 class="logo">ICTAK Alumni Job Portal</h1>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" routerLink="home"routerLinkActive="active">Home</a></li>
+          <a  class="navbar-brand" style="cursor:pointer"  *ngIf="!_auth.loggedIn()" routerLink="/jobvaccancy">Jobs</a>
+         
+          
+          <li><a class="nav-link scrollto " routerLink="adminhome">Services</a></li>
+          <a class="navbar-brand" id="logout" style="cursor:pointer" *ngIf="_auth.loggedIn()" (click)="logoutUser()" >Logout</a>
+          <!-- <a class="navbar-brand"  routerLink="/register" *ngIf="!_auth.loggedIn()" routerLinkActive="active"><span class="glyphicon glyphicon-user"></span> Sign Up</a> -->
+          <a class="navbar-brand"  routerLink="/login" *ngIf="!_auth.loggedIn()" routerLinkActive="active"><span class="glyphicon glyphicon-log-in"></span>Login</a>
+          
+          <li class="dropdown"><a class="navbar-brand" *ngIf="!_auth.loggedIn()" routerLink="users"><span>Sign up</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <!-- <li><a href="#">Drop Down 1</a></li> -->
+              <li class="dropdown"><a  routerLink="/register-alumni" *ngIf="!_auth.loggedIn()" routerLinkActive="active"><span>ALUMNI</span> <i class="bi bi-chevron-right"></i></a>
+                
+              </li>
+              <li><a  routerLink="/register-employer" *ngIf="!_auth.loggedIn()" routerLinkActive="active">JOB HIRERS</a></li>
+              <li><a  routerLink="/register" *ngIf="!_auth.loggedIn()" routerLinkActive="active">ICTAK FACULTY</a></li>
+           
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" *ngIf="_auth.loggedIn()">
+            <div class="photo">
+            <img alt="Profile photo" src="../../assets/img/profileimg.jpg"/> 
+
+          </div>&nbsp;&nbsp;Account
+        </a>
+        </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->

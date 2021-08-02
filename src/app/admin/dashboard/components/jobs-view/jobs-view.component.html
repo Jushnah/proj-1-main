@@ -1,0 +1,92 @@
+<div class="container" id="startdiv">
+    <div class="card">
+        <div class="card-header">
+            <tr><h2>SEARCH JOBS</h2></tr>
+            <tr>
+            <td><div class="col m6 no-padding header-form">
+                <input autocomplete="off" class="form-input full-width header-form border-right-0" type="text"
+                    name="keyword" placeholder="Job title, company, or keywords" value="Frontier Developments">
+            </div></td>
+        
+            <td><div class="col m5 no-padding header-form">
+                <input autocomplete="off" class="form-input full-width border-right-0 header-form" type="text"
+                    name="location" placeholder="City, state, or zip" value="">
+            </div></td>
+            <td><div class="col m1 no-padding header-form">
+                <button class="btn-header flexbox align-center" type="submit"><img class="icon-menu"
+                        src="../../../../../assets/img/search-icon.svg"></button>
+            </div></td>
+        </tr>
+          <tr></tr>  <br>
+            
+        </div>
+        <div class="row">
+            <div class="column">
+                <table>
+                    <tr *ngFor='let job of jobs'>
+                        <div class="card">
+                            
+                        <h2><a routerLink="job">{{ job.jobtitle}}</a></h2><br>
+                        <h4>{{ job.company}}</h4>
+                        <h4>{{ job.type}}</h4>
+                        <h4>{{ job.joblocation}}</h4>
+                       
+                           
+                      
+                        
+                        <button class="btn btn-warning" style="cursor:pointer"  (click)="viewjob(job)" style="margin-left: 20px;"> MORE</button>
+                        <!-- <p>{{ job.exdate}}
+                            
+                            {{ job.nojobs}}
+                            {{ job.description}}
+                        </p> -->
+                    </div>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="column">
+                <div class="item"><p></p>
+                    <div class="item"><p></p>
+                        <!-- <input type="text" name="p_fname" [(ngModel)]="jobnw.jobtitle"> -->
+                      
+                  </div>
+                 
+              
+              
+               
+                <table>
+                    <tr>
+                        <th>{{jobnw.jobtitle}}</th>
+                      
+                        
+                    </tr>
+                    <tr>
+                        <td>{{jobnw.company}}</td>
+                        <td>{{jobnw.type}}</td>
+                            
+                        
+                    </tr>
+                    <tr>
+                        
+                        <td>{{jobnw.joblocation}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{jobnw.nojobs}}</td>
+                        <td>{{jobnw.exdate}}</td>
+                    </tr>
+                    <tr>
+                        <p>{{jobnw.description}}</p>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>{{jobnw.qualification}}</p>
+                        </td>
+                    </tr>
+                </table>
+                <router-outlet></router-outlet>>
+            </div>
+        </div>
+
+    </div>
+</div>

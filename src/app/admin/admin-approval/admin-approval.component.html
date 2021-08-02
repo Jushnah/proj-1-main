@@ -1,0 +1,117 @@
+<div class="testbox" id="startdiv" >
+    <form #updateform="ngForm" (ngSubmit)="editUser()">
+      <div class="banner">
+        <h1> Update User Details</h1>
+      </div>
+     
+      <div class="item">
+      
+        
+          <ng-container *ngIf="Alumnicontent">
+            <div class="item">
+            <div class="item"><p>FIRST NAME</p>
+              <input type="text" name="p_fname" [(ngModel)]="userItem.firstname">
+            </div>
+              <div class="item"><p>LAST NAME</p>
+                <input type="text" name="p_lname" [(ngModel)]="userItem.lastname">
+
+              </div>
+              <div class="name-item"><p>Email-ID</p>
+                <input type="text" name="p_email" [(ngModel)]="userItem.user_email" />
+              </div>  
+              <div class="item">
+                <p>Phone Number::</p>
+                <input type="text" name="p_phone" [(ngModel)]="userItem.phone_number" />
+                
+              </div><br>
+            
+            <div class="item">
+              <p>GENDER</p>
+              <input type="text" name="p_gender" [(ngModel)]="userItem.gender" />
+              
+            </div>
+            <div class="item">
+              <p>DATE OF BIRTH:</p>
+              <input type="text" name="p_dob" [(ngModel)]="userItem.dob" />
+              
+            </div>
+            <div class="item">
+              <p>CITY:</p>
+              <input type="text" name="p_city" [(ngModel)]="userItem.city" />
+              
+            </div>
+            <div class="item">
+              <p>COURSE TAKEN FROM ICTAK:</p>
+              <input type="text" name="p_course" [(ngModel)]="userItem.course" />
+              <p>COURSE COMPLETION DATE</p>
+              <input type="text" name="p_date" [(ngModel)]="userItem.date" />
+              
+            </div>
+          </div>
+          </ng-container>
+          <ng-container *ngIf="Employercontent">
+            <div class="item">
+            <div class="item"><p>FIRST NAME</p>
+              <input type="text" name="p_fname" [(ngModel)]="userItem.firstname">
+            </div>
+              <div class="item"><p>LAST NAME</p>
+                <input type="text" name="p_lname" [(ngModel)]="userItem.lastname">
+
+              </div>
+              <div class="name-item"><p>Email-ID</p>
+                <input type="text" name="p_email" [(ngModel)]="userItem.user_email" />
+              </div>  
+              <div class="item">
+                <p>Phone Number::</p>
+                <input type="text" name="p_phone" [(ngModel)]="userItem.phone_number" />
+                
+              </div><br>
+            
+           
+              
+            
+            
+            <div class="item">
+              <p>Company name:</p>
+              <input type="text" name="p_city" [(ngModel)]="userItem.Company" />
+              
+            </div>
+            <div class="item">
+              <p>COmpany type</p>
+              <input type="text" name="p_course" [(ngModel)]="userItem.company_type" />
+              <p>JOB TITLE</p>
+              <input type="text" name="p_date" [(ngModel)]="userItem.job_title" />
+              
+            </div>
+            <div class="item">
+              <p>Company Website</p>
+              <input type="text" name="p_city" [(ngModel)]="userItem.website" />
+              
+            </div>
+          </div>
+          </ng-container>
+          <ng-container *ngIf="Facultycontent">
+            <div class="item"><p>FIRST NAME</p>
+              <input type="text" name="p_fname" [(ngModel)]="userItem.username">
+            </div>
+            <div class="name-item"><p>Email-ID</p>
+              <input type="text" name="p_email" [(ngModel)]="userItem.user_email" />
+            </div>  
+            <div class="item">
+              <p>PHONE NUMBER</p>
+              <input type="text" name="p_phone" [(ngModel)]="userItem.phone_number" />
+              
+            </div><br>
+          </ng-container>
+          
+         
+        
+      </div>
+      
+      
+      <div class="btn-block">
+        <button type="submit" value="Submit" >Approve </button>&nbsp;
+        <button type="cancel" value="Submit" (click)="cancel()">CANCEL </button>
+      </div>
+  </form>
+  </div>
